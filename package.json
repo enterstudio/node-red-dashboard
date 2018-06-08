@@ -1,29 +1,43 @@
 {
-	"name": "node-red-dashboard",
-	"version": "2.3.10-beta",
-	"description": "A set of dashboard nodes for Node-RED",
-	"keywords": [
-		"node-red"
-	],
-	"main": "none",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-        "postinstall": "node fixfa.js"
-	},
-	"contributors": [
-		{"name": "Andrei Tatar"},
-		{"name": "Dave Conway-Jones"},
-		{"name": "Joe Pavitt"},
-		{"name": "Nick O'Leary"},
-		{"name": "Dan Cunnington"},
-        {"name": "Laurence Stant"}
-	],
-	"license": "Apache-2.0",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/node-red/node-red-dashboard.git"
-	},
-	"node-red": {
+  "name": "node-red-dashboard",
+  "version": "2.3.10-beta",
+  "description": "A set of dashboard nodes for Node-RED",
+  "keywords": [
+    "node-red"
+  ],
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node fixfa.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "contributors": [
+    {
+      "name": "Andrei Tatar"
+    },
+    {
+      "name": "Dave Conway-Jones"
+    },
+    {
+      "name": "Joe Pavitt"
+    },
+    {
+      "name": "Nick O'Leary"
+    },
+    {
+      "name": "Dan Cunnington"
+    },
+    {
+      "name": "Laurence Stant"
+    }
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-red/node-red-dashboard.git"
+  },
+  "node-red": {
     "version": ">=0.14.0",
     "nodes": {
       "ui_base": "nodes/ui_base.js",
@@ -50,7 +64,8 @@
   },
   "dependencies": {
     "serve-static": "^1.11.2",
-    "socket.io": "^1.7.3"
+    "socket.io": "2.0.2",
+    "snyk": "^1.82.1"
   },
   "devDependencies": {
     "angular": "~1.5.11",
@@ -94,5 +109,6 @@
     "streamqueue": "^1.1.1",
     "svg-morpheus": "^0.3.0",
     "tinycolor2": "^1.4.1"
-  }
+  },
+  "snyk": true
 }
